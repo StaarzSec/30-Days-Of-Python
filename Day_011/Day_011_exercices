@@ -1,0 +1,133 @@
+# 1 :
+def add_two_numbers(num1: int, num2: int) -> int:
+    sum = num1 + num2
+    return sum
+
+# 2 :
+def area_of_circle(radius: float) -> float:
+    pi = 3.14
+    area = pi * radius **2
+    return area
+# 3 :
+def add_all_nums(*args: int) -> int:
+    sum = 0
+    for num in args:
+        sum += num
+    return sum
+
+# 4 :
+def convert_celsius_to_fahrenheit(celsius: float) -> float:
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+# 5 :
+def check_season(month: str) -> str:
+    if month in ['December', 'January', 'February']:
+        return "Winter"
+    elif month in ['March', 'April', 'May']:
+        return "Spring"
+    elif month in ['June', 'July', 'August']:
+        return "Summer"
+    elif month in ['September', 'October', 'November']:
+        return "Autumn"
+    else:
+        return "Invalid month"
+
+# 6 :
+def calculate_slope(x1 : float, y1 : float, x2 : float, y2 : float) ->float:
+    slope = (y2-y1) / (x2-x1)
+    return slope
+
+# 7 :
+def solve_quadratic_eqn(a : float, b : float, c : float, x : float) -> float:
+    result = a * x**2 + b * x + c
+    return result
+
+# 8 :
+def print_list(lst: list) -> None:
+    for item in lst:
+        print(item)
+
+# 9 :
+def reverse_list(lst: list) -> list:
+    reversed_lst = []
+    for i in range(len(lst)-1, -1, -1):
+        reversed_lst.append(lst[i])
+    return reversed_lst
+
+# 10 :
+def capitalize_list(lst: list) -> list:
+    capitalized_lst = []
+    for item in lst:
+        capitalized_lst.append(item.capitalize())
+    return capitalized_lst
+# 11 :
+def add_itens_to_list(lst: list, *args) -> list:
+    for item in args:
+        lst.append(item)
+    return lst
+
+# 12 :
+def remove_item(lst: list, item) -> list:
+    if item in lst:
+        lst.remove(item)
+    return lst
+
+# 13 :
+def  sum_of_numbers(num: int) -> int:
+    sum = 0
+    for i in range(1, num + 1):
+        sum += i
+    return sum
+# 14 :
+def sum_of_odds(num: int) -> int:
+    sum = 0
+    for i in range(1, num + 1):
+        if i % 2 != 0:
+            sum += i
+    return sum
+
+# 15 : 
+def sum_of_evens(num: int) -> int:
+    sum = 0
+    for i in range(1, num + 1):
+        if i % 2 == 0:
+            sum += i
+    return sum
+
+# Exercice level 2 
+
+# 1 :
+def evens_and_odds(num: int) -> tuple:
+    even = 0
+    odd = 0
+    for i in range(1, num + 1):
+        if i % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+    return f"The number of odds are {odd}\nThe number of evens are {even}."
+print(evens_and_odds(100))
+
+# 2 :
+def factorial(num: int) -> int:
+    if num == 0 or num == 1:
+        return 1
+    else:
+        return num * factorial(num - 1)
+    
+# 3 :
+def is_empty(lst: list) -> bool:
+    return len(lst) == 0
+# 4 :
+def greet(greeting: str="Hello", name: str="Guest") -> str:
+    return f"{greeting} {name}".
+
+# 1 Create a function called show_args to take an arbitrary number of named arguments and print their names and values.
+def show_args(**kwargs) -> None:
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+show_args(name="Alice", age=30, city="New York")
+# Received: name: Alice, age: 30, city: New York
+show_args(name="Bob", pet="Fluffy, the bunny")
+# Received: name: Bob, pet: Fluffy, the bunny
+
